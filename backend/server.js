@@ -11,8 +11,6 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect('mongodb://localhost:27017/health-tracker', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
     family: 4,
 })
     .then(() => console.log('MongoDB Connected'))
