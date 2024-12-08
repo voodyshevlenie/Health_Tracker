@@ -11,7 +11,7 @@ router.get('/recipes', async (req, res) => {
     try {
         const query = req.query.q; // Параметр поиска (название рецепта)
         
-        const response = await axios.get(`https://api.spoonacular.com/recipes/716429/information?apiKey=9b52ba700f854408bd80787aefe15964&includeNutrition=true`);
+        const response = await axios.get('https://api.spoonacular.com/recipes/716429/information?apiKey=9b52ba700f854408bd80787aefe15964&includeNutrition=true');
         
         if (response.status === 200) {
             res.json(response.data);
