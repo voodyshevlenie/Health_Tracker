@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,44 +8,44 @@
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
-<h2>Выполните Вход или Регистрацию</h2>
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h2 class="bot">Создайте свой Аккаунт</h2>
-			
-			<span class="bot">Заполните поля для Регистрации</span>
-			<input type="text" placeholder="Имя" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Пароль" />
-			<button>Создать</button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h2 class="bot">Войдите в Аккаунт</h2>
-			
-			<span class="bot">Заполните поля для Входа</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Пароль" />
-			<button>Вход</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h2>Приветствуем Вас!</h2>
-				<p>Мы рады видеть вас снова</p>
-				<button class="ghost" id="signIn">Войти</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h2>Присоединяйся к нам!</h2>
-				<p>Мы с нетерпеньем ждем тебя </p>
-				<button class="ghost" id="signUp">Создать</button>
-			</div>
-		</div>
-	</div>
-</div>
-<script src="register.js"></script>
+    <h2>Выполните Вход или Регистрацию</h2>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="/register" method="POST">
+          <h2 class="bot">Создайте свой Аккаунт</h2>
+          
+          <span class="bot">Заполните поля для Регистрации</span>
+		  <input type="text" name="username" placeholder="Имя" />
+		  <input type="email" name="email" placeholder="Email" />
+		  <input type="password" name="password" placeholder="Пароль" />
+          <button type="submit">Создать</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="/login" method="POST">
+          <h2 class="bot">Войдите в Аккаунт</h2>
+          
+          <span class="bot">Заполните поля для Входа</span>
+		  <input type="email" name="email" placeholder="Email" />
+		  <input type="password" name="password" placeholder="Пароль" />
+          <button type="submit">Вход</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h2>Приветствуем Вас!</h2>
+            <p>Мы рады видеть вас снова</p>
+            <button class="ghost" id="signIn">Войти</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h2>Присоединяйся к нам!</h2>
+            <p>Мы с нетерпеньем ждем тебя </p>
+            <button class="ghost" id="signUp">Создать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="register.js"></script>
 </body>
 </html>
